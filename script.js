@@ -1,6 +1,6 @@
 const search = document.getElementById('search')
 const submit = document.getElementById('submit')
-const random = document.getElementById('random')
+const random = document.querySelector('.random-btn')
 const mealsEl = document.getElementById('meals')
 const resultHeading = document.getElementById('result-heading')
 const single_mealEl = document.getElementById('single-meal')
@@ -81,6 +81,7 @@ function getMealById(mealID) {
         break;
       }
     }
+  }  
     function getRandomMeal() {
         // Clear meals and heading
         mealsEl.innerHTML = '';
@@ -147,4 +148,4 @@ mealsEl.addEventListener('click', e => {
         const mealID = mealInfo.getAttribute('data-mealid');
         getMealById(mealID)
     }
-}
+});
